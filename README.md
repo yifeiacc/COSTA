@@ -1,2 +1,27 @@
-# COSTA
-This repository is the code for KDD'22 paper: COSTA: Covariance Preserved Feature Augmentation for Graph Contrastive Learning. Code and paper will be realsed after the Carmera-Ready submission deadline.
+# COSTA: **CO**variance Pre**S**erved Fea**T**ure **A**ugmentation
+
+### Overview
+This repo contains an example implementation for KDD'22 paper: **COSTA: Covariance Preserved Feature Augmentation for Graph Contrastive Learning**. 
+This code provides the multiview MV-COSTA. The SV-COSTA can be easily obtained by modifying the MV-COSTA.
+
+### Overview
+
+COSTA is a **feature augmentation** method that generates augmented samples in the feature space (latent space). It produced a bias-free and covariance bouned augmentation to alleviate the bias problem in the typical graph augmentation (e.g., edge permutations) 
+
+### Dependencies
+Our implementation works with PyTorch>=1.0.0 Install other dependencies: `$ pip install -r requirement.txt`
+
+### Reproduce our results
+We provide sevearl datasets to reproduce our results. We provide wandb log to show the performance. For example
+
+Cora: https://wandb.ai/yifeiacc/COSTA/runs/2gsyndrf/overview?workspace=user-yifeiacc
+
+CiteSeer: https://wandb.ai/yifeiacc/COSTA/runs/31jrnccw?workspace=user-yifeiacc
+
+The detail setting (including hyper-paramters, GPUs) and result can be found in these logs. You can directly checkout to conspondng branch
+
+### Usage
+To run our code, just run following
+```
+$ cd src 
+$ python main.py --root path/to/COSTA/dir --dataset Cora --model COSTA --config COSTA_default.yaml
