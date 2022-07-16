@@ -18,7 +18,7 @@ Cora: https://wandb.ai/yifeiacc/COSTA/runs/2gsyndrf/overview?workspace=user-yife
 
 CiteSeer: https://wandb.ai/yifeiacc/COSTA/runs/31jrnccw?workspace=user-yifeiacc
 
-The detailed settings (including hyper-parameters and GPUs) and the results can be found in these logs. You can directly checkout to the corresponding branch.
+The detailed settings (including hyper-parameters and GPUs) and the results can be found in these logs. You can directly checkout to the corresponding branch(commit).
 
 ### Usage
 To run our code, just run the following
