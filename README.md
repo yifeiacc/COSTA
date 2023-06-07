@@ -12,11 +12,9 @@ COSTA is a **feature augmentation** method that generates augmented samples in t
 Our implementation works with PyTorch>=1.0.0 Install other dependencies: `$ pip install -r requirement.txt`
 
 ### Reproduce our results
-We provide several datasets to reproduce our results. We provide wandb logs to show the performance. For example
+We provide several datasets to reproduce our results. We provide wandb logs to show the performance. See following to see the detail
 
-Cora: https://wandb.ai/yifeiacc/COSTA/runs/2gsyndrf/overview?workspace=user-yifeiacc
-
-CiteSeer: https://wandb.ai/yifeiacc/COSTA/runs/31jrnccw?workspace=user-yifeiacc
+https://wandb.ai/yifeiacc/COSTA_public?workspace=user-yifeiacc
 
 The detailed settings (including hyper-parameters and GPUs) and the results can be found in these logs. You can directly checkout to the corresponding branch(commit).
 
