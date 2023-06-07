@@ -104,7 +104,7 @@ class Runner(BaseGSSLRunner):
 
                 z, z1, z2 = self.model(self.data.x, self.data.edge_index, self.data.edge_attr)
                 
-                k = torch.tensor(int(z.shape[0] * 0.5))
+                k = torch.tensor(int(z.shape[0] * self.config["ratio"]))
                 p = (1/torch.sqrt(k))*torch.randn(k, z.shape[0]).to(self.device)
 
                 z1 = p @ z1
@@ -121,7 +121,7 @@ class Runner(BaseGSSLRunner):
                 pbar.set_postfix({'loss': loss.item()})
                 pbar.update()
 
-                if  self.config['test_every_epoch'] and epoch % 100 == 0:
+                if  self.config['test_every_epoch'] and epoch % 10 == 0:
                     self.test( t='random')
                    
 
@@ -134,8 +134,8 @@ class Runner(BaseGSSLRunner):
             split = get_split(num_samples=z.size()[0], train_ratio=0.1, test_ratio=0.8)
         if t == 'public':
             split = from_predefined_split(self.data)
-        result = LREvaluator()(z, self.data.y, split)
-        wandb.log(result)
+        result = LREvaluator(num_epochs=self.config["lr_num_epochs"])(z, self.data.y, split)
+#        wandb.log(result)
         print(f"(E): Best test F1Mi={result['micro_f1']:.4f}, F1Ma={result['macro_f1']:.4f}")
 
             

@@ -22,7 +22,7 @@ if __name__ == '__main__':
     config['dataset'] = args.dataset
     config['data_dir'] = osp.join(args.root, 'data')
 
-    wandb.init(project='COSTA', entity='yifeiacc', config={'test_every_epoch': False})
+    wandb.init(project='COSTA_public', entity='yifeiacc', config={'test_every_epoch': False})
     wandb.config.update(args)
     wandb.config.update(config)
 

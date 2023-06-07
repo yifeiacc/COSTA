@@ -8,11 +8,11 @@ CiteSeer:
   drop_edge_rate_2: 0.0
   drop_feature_rate_1: 0.3
   drop_feature_rate_2: 0.2
-  tau: 0.4
-  num_epochs: 1500 # 499 both
-  eta: 0.1
-  K: 2
-  m: 1
+  tau: 0.1
+  num_epochs: 700
+  lr_num_epochs: 5000
+  ratio: 0.5
+
 
 
 Cora:
@@ -28,23 +28,93 @@ Cora:
   drop_feature_rate_1: 0.3
   drop_feature_rate_2: 0.4
   tau: 0.4
-  num_epochs: 700 # 1000 for both 500 fow pw
-  eta: 0.1
-  K: 1433
-  m: 1 
+  num_epochs: 700
+  ratio: 0.5
+  lr_num_epochs: 5000
+ 
 
 
 WikiCS:
   seed: 12345
-  learning_rate: 0.01
-  num_hidden: 256
-  num_proj_hidden: 256
+  learning_rate: 0.00001
+  num_hidden: 512
+  num_proj_hidden: 512
   num_layers: 2
-  drop_edge_rate_1: 0.2
-  drop_edge_rate_2: 0.3
-  drop_feature_rate_1: 0.1
-  drop_feature_rate_2: 0.1
+  drop_edge_rate_1: 0.0
+  drop_edge_rate_2: 0.1
+  drop_feature_rate_1: 0.5
+  drop_feature_rate_2: 0.5
+  tau: 0.2
+  ratio: 0.8
+  num_epochs: 30
+  lr_num_epochs: 5000
+  eta: 0.1
+  K: 1
+
+
+Amazon-Photo:
+  seed: 12345
+  learning_rate: 0.0001
+  num_hidden: 512
+  num_proj_hidden: 512
+  num_layers: 2
+  drop_edge_rate_1: 0.0
+  drop_edge_rate_2: 0.1
+  drop_feature_rate_1: 0.5
+  drop_feature_rate_2: 0.5
+  tau: 0.3
+  ratio: 0.5
+  num_epochs: 10
+  lr_num_epochs: 10000
+  eta: 0.1
+  K: 1
+
+Coauthor-CS:
+  seed: 12345
+  learning_rate: 0.001
+  num_hidden: 512
+  num_proj_hidden: 512
+  num_layers: 2
+  drop_edge_rate_1: 0.0
+  drop_edge_rate_2: 0.1
+  drop_feature_rate_1: 0.5
+  drop_feature_rate_2: 0.5
   tau: 0.4
-  num_epochs: 3000
+  ratio: 0.5
+  num_epochs: 20
+  lr_num_epochs: 10000
+
+
+  
+Coauthor-Phy:
+  seed: 12345
+  learning_rate: 0.001
+  num_hidden: 512
+  num_proj_hidden: 512
+  num_layers: 2
+  drop_edge_rate_1: 0.0
+  drop_edge_rate_2: 0.1
+  drop_feature_rate_1: 0.5
+  drop_feature_rate_2: 0.5
+  tau: 0.4
+  ratio: 0.25
+  num_epochs: 5
+  lr_num_epochs: 10000
+
+
+Amazon-Computers:
+  seed: 12345
+  learning_rate: 0.0001
+  num_hidden: 512
+  num_proj_hidden: 512
+  num_layers: 2
+  drop_edge_rate_1: 0.0
+  drop_edge_rate_2: 0.1
+  drop_feature_rate_1: 0.5
+  drop_feature_rate_2: 0.5
+  tau: 1
+  ratio: 0.8
+  num_epochs: 10
+  lr_num_epochs: 20000
   eta: 0.1
   K: 1
